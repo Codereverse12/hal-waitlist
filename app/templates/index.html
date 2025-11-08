@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- MAIN -->
+    <main class="flex-grow flex flex-col items-center justify-center w-full mt-[-4rem]">
+
+        <!-- HERO SECTION -->
+        <section class="text-center mt-12 md:mt-24 max-w-full">
+            <h1 class="text-5xl md:text-7xl font-serif font-medium text-white leading-tight">
+                Your AI assistant <br />for the web
+            </h1>
+            <p class="mt-6 text-gray-300 max-w-xl mx-auto text-lg md:text-xl">
+                Sees what you see, hears what you hear, understands what you do, and takes action on your behalf.
+            </p>
+
+            <form action="" method="post" class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                {{ form.hidden_tag() }}
+
+                <div class="relative w-full sm:flex-grow">
+                    {{ form.email(placeholder="dave@example.com", class="bg-gray-900/80 border border-gray-700 text-white placeholder-gray-500 rounded-lg w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500/80 backdrop-blur-sm") }}
+                    
+                    {% for error in form.email.errors %}
+                        <p class="absolute left-0 right-0 text-red-500 text-sm mt-1 text-center">{{ error }}</p>
+                    {% endfor %}
+                </div> 
+
+                {{ form.submit(class="bg-red-700 text-white font-semibold py-3 px-8 rounded-lg w-full sm:w-auto hover:bg-red-800 transition-colors flex-shrink-0") }}
+            </form>
+            
+        </section>
+
+        <!-- BROWSER WINDOW -->
+        <div class="mt-16 w-full">
+            <div class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl bg-black/70 backdrop-blur-sm p-1.5 border border-white/10">
+                <div class="h-8 flex items-center justify-between px-3 bg-gradient-to-b from-orange-300/10 via-orange-400/10 to-blue-500/10 rounded-t-lg">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 text-white/70">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.393 9.393a15 15 0 0121.214 0"/>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relative w-full aspect-video bg-black rounded-b-lg overflow-hidden">
+                    <iframe
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/ARJ8cAGm6JE?autoplay=1&mute=1&loop=1&playlist=ARJ8cAGm6JE&controls=0&showinfo=0"
+                        title="YouTube video player for hal ai"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}

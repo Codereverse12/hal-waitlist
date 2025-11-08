@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:description" content="Transform all browsers into Agentic AI.">
+    <meta property="og:image" content="https://halai.xyz/static/assets/images/HalLogo.png">
+    <meta property="og:title" content="halai.xyz">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:creator" content="@im_yeabsira">
+    <meta property="twitter:description" content="Transform all browsers into Agentic AI.">
+    <meta property="twitter:image" content="https://halai.xyz/static/assets/images/HalLogo.png">
+    <meta property="twitter:site" content="@im_yeabsira">
+    <meta property="twitter:title" content="halai.xyz">
+
+    <!-- icon -->
+    <link href="/static/assets/images/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" href="/static/assets/images/apple-touch-icon.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>{{ title }} - Hal AI</title>
+</head>
+
+<body class="min-h-screen bg-black text-white font-sans relative overflow-x-hidden">
+
+    <!-- Background Glow -->
+    <div
+        class="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] rounded-full bg-red-700 blur-[300px] opacity-30 -translate-x-1/2 -translate-y-1/2 animate-pulse-slow pointer-events-none">
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center min-h-screen px-4 pb-16">
+
+        <!-- HEADER -->
+        <header class="w-full max-w-7xl py-6 flex justify-between items-center text-white">
+            <div class="flex items-center space-x-3">
+                <img src="/static/assets/images/HalLogo.png" alt="hal logo" class="h-6 w-6 object-contain" />
+                <span class="font-semibold text-lg tracking-wider">Hal AI</span>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

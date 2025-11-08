@@ -1,0 +1,2 @@
+FLASK_APP=halai.py
+FLASK_DEBUG=1
