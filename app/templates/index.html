@@ -42,31 +42,30 @@
                     <div class="flex items-center space-x-4 text-white/70">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.393 9.393a15 15 0 0121.214 0"/>
+                                d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.393 9.393a15 15 0 0121.214 0"/>
                         </svg>
 
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                     </div>
                 </div>
 
                 <div class="relative w-full aspect-video bg-black rounded-b-lg overflow-hidden">
-                    <iframe
-                        class="w-full h-full"
-                        src="https://www.youtube.com/embed/ARJ8cAGm6JE?autoplay=1&mute=1&loop=1&playlist=ARJ8cAGm6JE&controls=0&showinfo=0"
-                        title="YouTube video player for hal ai"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen>
-                    </iframe>
+                    <video 
+                        class="w-full h-full object-cover"
+                        src="/static/assets/videos/demo-video.mp4"
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline>
+                    </video>
                 </div>
             </div>
         </div>
-
+        
     </main>
 {% endblock %}
